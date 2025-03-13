@@ -9,8 +9,8 @@ function App() {
     <>
       <main className="bg-black">
         <Navbar />
-        <Highlights />
-        <Hero />
+        {/* <Highlights />
+        <Hero /> */}
       </main>
     </>
   )

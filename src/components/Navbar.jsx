@@ -5,7 +5,7 @@ import { navLists } from '../constants/index'
 const Navbar = () => {
   return (
     <header className='w-full py-5 px-5 sm:px-10 flex justify-center items-center'>
-    <nav className='w-full max-w-[1180px] flex '>
+    <nav className='w-full screen-max-width flex '>
 
         <img src={appleImg} alt="Apple Image" className='' width={14} height={18} />
     

@@ -124,9 +124,12 @@ const VideoCarousal = () => {
             case 'video-reset':
                 setVideo( (prevVideo) => ({...prevVideo, isLastVideo:false, videoId:0}));
                 break;
-            case 'video-play':
+            case 'play':
                 setVideo( (prevVideo) => ({...prevVideo, isPlaying:!isPlaying,}));
                 break;
+            case 'pause':
+            setVideo( (prevVideo) => ({...prevVideo, isPlaying:!isPlaying,}));
+            break;
             default:
                 return video
         }
@@ -150,7 +153,8 @@ const VideoCarousal = () => {
                             <video 
                             id='video' 
                             preload='auto' 
-                            muted playsInline={true} 
+                            muted 
+                            playsInline={true} 
                             key={slide.video}
                             ref={(el)=> (videoRef.current[i] = el)}
                             onPlay={()=>{
@@ -199,8 +203,10 @@ const VideoCarousal = () => {
                 </span>
             ))} 
         </div>
+
         <button className='control-btn'>
             <img
+                className='cursor-pointer'
                 onClick={isLastVideo ? ()=> handleProcess('video-reset') : !isPlaying ? ()=> handleProcess('play') : ()=> handleProcess('pause')} 
                 src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg } 
                 alt={isLastVideo ? "replay" : !isPlaying ? 'play' : "pause"} /> 

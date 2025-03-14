@@ -1,7 +1,6 @@
-import React from "react"
-import Navbar from "./Components/Navbar"
-import Hero from "./Components/Hero"
-import Highlights from "./Components/Highlights"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import Highlights from "./components/Highlights"
 
 function App() {
 
@@ -9,8 +8,8 @@ function App() {
     <>
       <main className="bg-black">
         <Navbar />
-        {/* <Highlights />
-        <Hero /> */}
+        <Hero />
+        <Highlights />
       </main>
     </>
   )

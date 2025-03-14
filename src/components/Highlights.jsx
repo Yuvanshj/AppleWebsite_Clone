@@ -46,7 +46,7 @@ const Highlights = () => {
               <img className='ml-2' src={rightImg} alt="watchImage" />
             </p>
           </div>
-        </div>
+          </div>
         <VideoCarousal />
       </div>
     </section>

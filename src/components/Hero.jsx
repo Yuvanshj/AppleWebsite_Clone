@@ -24,7 +24,8 @@ const Hero = () => {
   
 
   useGSAP( ()=>{
-  
+    
+    
     if(videoSrc === smallHeroVideo){
       gsap.to('.hero-title', {
         opacity: 0.6,
@@ -47,7 +48,7 @@ const Hero = () => {
 
       gsap.to('#cta', {
         opacity: 1,
-        y:-150,
+        y:-100,
         delay:1,
         ease:'power1.inOut'
       })

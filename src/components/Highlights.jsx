@@ -5,6 +5,7 @@ import {ScrollTrigger} from 'gsap/all'
 import { rightImg, watchImg } from '../utils'
 
 import VideoCarousal from './VideoCarousal'
+import { animateWithGsap } from '../utils/animations'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -13,13 +14,13 @@ const Highlights = () => {
   // const scrollRef = React.useRef(()=>{});
 
   useGSAP(()=>{
-    gsap.to('#title',{
+    animateWithGsap('#title',{
       opacity: 1,
       ease: 'power1.inOut',
       y:0,
       // delay:3,
     })
-    gsap.to('.link',{
+    animateWithGsap('.link',{
       opacity: 1,
       ease: 'power1.inOut',
       y:0,
